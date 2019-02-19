@@ -1,10 +1,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="dudewheresarecar.bobthekettleapp.MainActivity">
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_home"
+        app:showAsAction="ifRoom"
+        android:title="@string/menu_home"
+        android:icon="@drawable/ic_home_black_24dp" />
+    <item android:id="@+id/action_stats"
+        app:showAsAction="ifRoom"
+        android:title="@string/menu_stats"
+        android:icon="@drawable/ic_equalizer_black_24dp" />
+    <item android:id="@+id/action_help"
+        app:showAsAction="ifRoom"
+        android:title="@string/menu_help"
+        android:icon="@drawable/ic_help_black_24dp" />
+    <item android:id="@+id/action_settings"
+        app:showAsAction="ifRoom"
+        android:title="@string/menu_settings"
+        android:icon="@drawable/ic_settings_black_24dp" />
 </menu>
