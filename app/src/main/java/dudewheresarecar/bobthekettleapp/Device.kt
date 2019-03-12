@@ -3,8 +3,7 @@ package dudewheresarecar.bobthekettleapp
 import java.net.NetworkInterface
 import java.util.*
 import android.os.Build
-
-
+import org.json.JSONObject
 
 
 class Device {
@@ -40,7 +39,7 @@ class Device {
         return ""
     }
 
-    fun getDeviceName(): String {
+    private fun getDeviceName(): String {
         val manufacturer = Build.MANUFACTURER
         val model = Build.MODEL
         return if (model.startsWith(manufacturer)) {
@@ -61,5 +60,12 @@ class Device {
         } else {
             Character.toUpperCase(first) + s.substring(1)
         }
+    }
+
+    fun toJSON(): String {
+        val json = JSONObject()
+        json.put("name", name)
+        json.put("ipAddress", ipAddress)
+        return json.toString()
     }
 }
