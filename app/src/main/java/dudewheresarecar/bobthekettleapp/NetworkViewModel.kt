@@ -5,9 +5,9 @@ import okhttp3.*
 import java.io.IOException
 
 class NetworkViewModel : ViewModel() {
-    private val client = OkHttpClient()
 
     fun postToServer(url: String, json: String): String {
+        val client = OkHttpClient()
         val JSON: MediaType = MediaType.get("application/json; charset=utf-8")
         val body: RequestBody = RequestBody.create(JSON, json)
         val request = Request.Builder()
@@ -24,6 +24,7 @@ class NetworkViewModel : ViewModel() {
     }
 
     fun getFromServer(url: String): String {
+        val client = OkHttpClient()
         val request = Request.Builder()
                 .url(url)
                 .build()

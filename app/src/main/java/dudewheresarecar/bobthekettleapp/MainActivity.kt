@@ -4,12 +4,15 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.FragmentActivity
 import android.support.v4.app.FragmentTransaction
+import android.support.v7.app.AppCompatDelegate
 import android.util.Log
+import android.widget.Switch
 
 class MainActivity : FragmentActivity()  {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         setContentView(R.layout.activity_main)
 
         // Set up initial home fragment and set action listeners for the bottom nav to switch fragments
